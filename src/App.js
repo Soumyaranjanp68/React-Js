@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import logo from './logo.jpg';
 import './App.css';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <div >
+        <img src={logo} alt="logo"/>
+      </div>
+      <div>
+        <input  id='searchBar' type="text" />
+      </div>
+      <div>
+        <button className='btn'>Google Search</button>
+        <button className='btn'>I'm Feeling Lucky</button>
+      </div>
+      <div >
+        <p>Google.ca offererd in: <span id="lang">{props.language }</span></p>
+      </div>
+   </div>
+ );
 }
 
-export default App;
+export default App
