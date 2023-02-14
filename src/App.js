@@ -1,24 +1,23 @@
-import logo from './logo.jpg';
+import React,{useState} from "react";
 import './App.css';
 
 function App(props) {
+  const [bio,setBio]=useState("");
   return (
-    <div className="App">
-      <div >
-        <img src={logo} alt="logo"/>
-      </div>
-      <div>
-        <input  id='searchBar' type="text" />
-      </div>
-      <div>
-        <button className='btn'>Google Search</button>
-        <button className='btn'>I'm Feeling Lucky</button>
-      </div>
-      <div >
-        <p>Google.ca offererd in: <span id="lang">{props.language }</span></p>
-      </div>
-   </div>
- );
+    <div className="OuterContainer">
+      <textarea id="area" value={bio} 
+      onChange={(e)=>{
+        setBio(e.target.value)
+      }}></textarea>
+      <br/>
+      <button id="btn" onClick={()=>{
+        let newBio=bio
+        setBio(newBio.toUpperCase())
+      }}>Change To UpperCase
+      </button>
+      <p id="para">{bio}</p>
+    </div>
+    );
 }
 
-export default App
+export default App;
