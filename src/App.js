@@ -1,24 +1,24 @@
-import "./App.css"
-import React, { useState , useEffect} from "react";
+import logo from './logo.jpg';
+import './App.css';
 
-const JsonPlaceHoler = "https://jsonplaceholder.typicode.com/posts"
-
-const JsonPlaceHolerList = () => {
-    const [jsonList,setJsonList]=useState([])
-
-    useEffect(()=>{
-        fetch(JsonPlaceHoler).then(response=>response.json()).then(data=>setJsonList(data))
-    },[])
-
-    return(
-        <div className="post">
-            {jsonList.map((post)=>(
-                <div key={post.id} className="post-card">
-                  <h2>{post.title}</h2>
-                  <p>{post.body}</p>
-                </div>
-            ))}
-        </div>
-    )
+function App(props) {
+  return (
+    <div className="App">
+      <div >
+        <img src={logo} alt="logo"/>
+      </div>
+      <div>
+        <input  id='searchBar' type="text" />
+      </div>
+      <div>
+        <button className='btn'>Google Search</button>
+        <button className='btn'>I'm Feeling Lucky</button>
+      </div>
+      <div >
+        <p>Google.ca offererd in: <span id="lang" >{props.language }</span></p>
+      </div>
+    </div>
+  );
 }
-export default JsonPlaceHolerList;
+
+export default App; 

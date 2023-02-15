@@ -1,6 +1,21 @@
-.post-card{
-  border: 2px solid red;
-  border-radius: 20px;
-  padding: 60px;
-  margin: 10px 50px;
+.App {
+  padding: 10%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items:center;
+}
+#searchBar{
+  border: 2px solid;
+  border-radius: 10px;
+  font-size: 30px;
+  padding: 5px 50px;
+}
+.btn{
+  margin: 10px 2px;
+  padding: 10px;
+}
+#lang{
+  color: blue;
 }
