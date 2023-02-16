@@ -13,7 +13,7 @@
 
 .btn{
   border: none;
-  padding: 5px;
+  padding: 4px;
   margin: 5px;
   color: white;
   border-radius: 6px;
@@ -21,12 +21,14 @@
 }
 #btn1{
   background-color: green;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 #btn2{
   background-color: red;
-  font-size: 20px;
+  font-size: 15px;
 }
 
-
+p{
+  font-size: 30px;
+}
