@@ -1,24 +1,23 @@
-import logo from './logo.jpg';
-import './App.css';
+import React,{useState} from "react";
+import "./App.css"
 
-function App(props) {
+export default function Counter() {
+  const [count,setCount] = useState(0);
+  const increment=()=>{
+    setCount(count+1)
+  }
+  const decrement=()=>{
+    setCount(count-1)
+  }
+
   return (
-    <div className="App">
-      <div >
-        <img src={logo} alt="logo"/>
-      </div>
-      <div>
-        <input  id='searchBar' type="text" />
-      </div>
-      <div>
-        <button className='btn'>Google Search</button>
-        <button className='btn'>I'm Feeling Lucky</button>
-      </div>
-      <div >
-        <p>Google.ca offererd in: <span id="lang" >{props.language }</span></p>
-      </div>
+    <div class="container">
+    <h2>Counter</h2>
+    <p>{count>=0?count:"Only positive value acepted"}</p>
+    <button class="btn"  onClick={increment}>Increment</button>
+    {" "}
+    <button class="btn" onClick={decrement}>Decrement</button>
     </div>
   );
 }
 
-export default App; 
