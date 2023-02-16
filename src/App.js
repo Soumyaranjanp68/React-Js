@@ -14,9 +14,8 @@ export default function Counter() {
     <div class="container">
     <h2>Counter</h2>
     <p>{count>=0?count:"Only positive value acepted"}</p>
-    <button class="btn"  onClick={increment}>Increment</button>
-    {" "}
-    <button class="btn" onClick={decrement}>Decrement</button>
+    <button class="btn" id="btn1" onClick={increment}>Increment</button>
+    <button class="btn" id="btn2" onClick={decrement}>Decrement</button>
     </div>
   );
 }
